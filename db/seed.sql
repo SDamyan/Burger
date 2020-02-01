@@ -1,9 +1,11 @@
-INSERT INTO burgers (burger_name, devoured) 
-    VALUES ("Bacon, egg, and cheeseburger", false);
+SELECT * FROM burger_DB.burgers;
 
-INSERT INTO burgers (burger_name, devoured) 
-    VALUES ("Veggie burger", false);
+INSERT INTO burgers (burger_name) 
+    VALUES ("Bacon, egg, and cheeseburger");
 
-INSERT INTO burgers (burger_name, devoured) 
-    VALUES ("Turkey burger", false);
+INSERT INTO burgers (burger_name) 
+    VALUES ("Veggie burger");
+
+INSERT INTO burgers (burger_name) 
+    VALUES ("Turkey burger");
 
