@@ -1,24 +1,10 @@
-<h1>Eat-Da-Burger!</h1>
 
-<h2>Burgers</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devouredy}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Devoured Burgers</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devouredy}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Eat-Da-Burger</h1>
+    <p class="lead">Add a burger to eat now or later!</p>
+  </div>
+</div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -28,11 +14,33 @@
     <input type="text" id="ca" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="devouredy">Devoured?</label><br>
-    <input type="radio" name="devouredy" value="1" checked> Devoured!<br>
-    <input type="radio" name="devouredy" value="0"> Ready to Eat
-  </div>
-
-  <button type="submit">Add Burger</button>
+  <button id = "submitBtn" type="submit">Add Burger</button>
 </form>
+
+<h2>Burgers</h2>
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+      {{#each burgers}}
+      {{#unless devouredy}}
+        {{> burgers/burger-block devouredy=true}}
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
+
+<h2>Devoured Burgers</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devouredy}}
+      {{> burgers/burger-block devouredy=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand" href="#">Burgers...mmm</a>
+</nav>

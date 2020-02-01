@@ -35,12 +35,6 @@ function printQuestionMarks(num) {
     return arr.toString();
   }
   
-//todo create the methods that will execute the necessary MySQL commands in the controllers. 
-//todo These are the methods you will need to use in order to retrieve and store data in your database.
-
-//selectAll()
-//insertOne()
-//updateOne()
 
 // Object for all our SQL statement functions.
 // const tableName = 'burgers';
@@ -88,7 +82,7 @@ const orm = {
 
     // An example of objColVals would be {name: blt , devouredy: true}
     updateOne: function(tableName, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
+        var queryString = "UPDATE " + tableName;
 
         queryString += " SET ";
         queryString += objToSql(objColVals);

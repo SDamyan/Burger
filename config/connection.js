@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         host: "localhost",
         port: 3306,
         user: "root",
-        password: "",
+        password: "Password123",
         database: "burger_DB"
     });
 };
@@ -20,15 +20,6 @@ connection.connect();
 // Export connection for our ORM to use.  
 module.exports = connection;
 
-/* 
-// Make connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-}); */
 
 
 
