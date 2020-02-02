@@ -1,20 +1,99 @@
+.jumbotron {
+  background-color: rgba(248, 174, 36, 0.849);
+  color: blue;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px 2px;
+  font-size: 33px;
+}
+
+.card-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+h1 {
+  text-shadow: 2px 2px 5px rgb(26, 26, 82);
+}
+
+h2 {
+  color: orange;
+  text-shadow: 2px 2px 5px rgb(136, 97, 39);
+  text-align: center;
+}
+
+.navbar-brand {
+  background-color: rgba(248, 174, 36, 0.849);
+  text-align: center;
+  margin-top: 10px;
+}
+
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: #f8c685;
   }
   
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
+  .create-form {
     padding: 5px;
     margin: 5px;
-    background: aqua;
+    background: orange;
+    color: blue;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
   }
-  
+
+  .card {
+    padding: 5px;
+    margin: 5px;
+    background: orange;
+    color: blue;
+    font-weight: bold;
+    
+  }
+
+  .card1 {
+    position: relative;
+    left: 250px;
+  }
+
+  .card2 {
+    position: relative;
+    left: 800px;
+    bottom: 200px;
+  }
+
+  .card-header {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
   .form-group {
     margin-bottom: 5px;
   }
+
+  #submitBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    background-color: lightblue;
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
+  }
+
+  .change-devoured {
+    background-color: lightblue;
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
+  }
+
   

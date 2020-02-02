@@ -1,46 +1,72 @@
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Eat-Da-Burger</h1>
-    <p class="lead">Add a burger to eat now or later!</p>
+<div class = "row">
+  <div class = "col-lg-10">
+        <div class="jumbotron mx-auto">
+      <div class="container">
+        <h1 class="display-4">Eat-Da-Burger</h1>
+        <p class="lead">Add a burger to eat now or later!</p>
+      </div>
+    </div>
   </div>
 </div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+<div class = "row">
+  <div class = "col-lg-3 mx-auto">
+    <div class = "pic"> </div>
+    <img src="/assets/css/img/burger.jpg"  class="card-img" alt="Burger">
   </div>
-
-  <button id = "submitBtn" type="submit">Add Burger</button>
-</form>
-
-<h2>Burgers</h2>
-<div class="card" style="width: 18rem;">
-  <div class="card-header">
-    Featured
-  </div>
-  <ul class="list-group list-group-flush">
-      {{#each burgers}}
-      {{#unless devouredy}}
-        {{> burgers/burger-block devouredy=true}}
-      {{/unless}}
-    {{/each}}
-  </ul>
 </div>
 
-<h2>Devoured Burgers</h2>
+<div class = "row">
+  <div class = "col-lg-6">
+    <form class="create-form">
+      <div class="form-group mx-auto">
+        <label class = "card-header" for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="name">
+      </div>
+      <button id = "submitBtn" type="submit">Add Burger</button>
+    </form>
 
-<ul>
-  {{#each burgers}}
-    {{#if devouredy}}
-      {{> burgers/burger-block devouredy=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+  </div>
+</div>
+<br/>
 
-<nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="navbar-brand" href="#">Burgers...mmm</a>
-</nav>
+<span class= "cardSpan">
+<div class = "card-deck">
+<div class = "row">
+  <div class = "col">
+    <div class="card card1" style="width: 18rem;">
+      <div class="card-header">Burgers</div>
+      <ul class="list-group list-group-flush">
+          {{#each burgers}}
+          {{#unless devouredy}}
+            {{> burgers/burger-block devouredy=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  </span>
+
+<span class= "cardSpan"> 
+<div class = "col">
+  <div class="card card2" style="width: 18rem;">
+    <div class="card-header">Devoured Burgers</div>
+    <ul class="list-group list-group-flush">
+        {{#each burgers}}
+          {{#if devouredy}}
+            {{> burgers/burger-block devouredy=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+  </div>
+</div>
+</span> 
+</div>
+</div>
+
+<div class = "navbar">
+    <nav class="navbar fixed-bottom">
+    <a class="navbar-brand" href="#"></a>
+  </nav>
+</div>
